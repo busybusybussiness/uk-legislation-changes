@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API &amp; MCP docs — UK Legislation Changes</title>
+<meta name="description" content="Free API and MCP server for UK legislation amendment history. 506 provisions, keyless, OGL v3.0.">
+<style>*{box-sizing:border-box}
+body{margin:0;padding:0;color:var(--foreground);font-family:inherit}
+.wrap{max-width:760px}
+h2{margin:0 0 2px;font-size:19px;letter-spacing:-.01em}
+.sub{color:var(--muted-foreground);font-size:13px;margin:0 0 14px}
+.stats{display:flex;gap:22px;padding:11px 14px;border:1px solid var(--border);border-radius:9px;margin-bottom:14px;background:var(--card)}
+.stat b{display:block;font-size:20px;line-height:1.15}
+.stat span{font-size:11px;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:.05em}
+.card{border:1px solid var(--border);border-radius:9px;padding:13px 15px;margin-bottom:9px;background:var(--card)}
+.chead{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+h3{margin:0 0 9px;font-size:14px;font-weight:600;line-height:1.35}
+.badge{font-size:10px;color:var(--muted-foreground);border:1px solid var(--border);border-radius:20px;padding:2px 8px;white-space:nowrap}
+.track{display:flex;align-items:center;gap:5px;height:14px;margin:2px 0 5px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--border);flex:0 0 auto;cursor:help}
+.dot.amd{background:var(--accent);width:11px;height:11px}
+.range{display:flex;justify-content:space-between;font-size:10px;color:var(--muted-foreground);margin-bottom:9px;font-variant-numeric:tabular-nums}
+.latest{margin:0 0 9px;font-size:12.5px;line-height:1.5;color:var(--foreground)}
+.src{font-size:11px;color:var(--muted-foreground);text-decoration:none}
+.src:hover{color:var(--accent)}
+.attr{margin-top:14px;padding-top:11px;border-top:1px solid var(--border);font-size:10.5px;color:var(--muted-foreground);line-height:1.6}
+.attr a{color:inherit}
+.showing{font-size:11px;color:var(--muted-foreground);margin:0 0 10px}
+
+pre{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:11px 13px;overflow-x:auto;font-size:11.5px;line-height:1.6;margin:8px 0}
+code{font-size:11.5px}
+h3{margin:20px 0 6px;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:12px;margin:8px 0}
+td,th{border:1px solid var(--border);padding:6px 9px;text-align:left}
+th{font-weight:600}
+.disc{border-left:2px solid var(--accent);padding:9px 13px;font-size:12px;color:var(--muted-foreground);line-height:1.6;margin:12px 0}
+</style></head><body><div class="wrap">
+<h2>UK Legislation Changes — API &amp; MCP</h2>
+<p class="sub">Free, keyless API for point-in-time amendment history of UK law.
+506 provisions · 1,548 tracked versions · no signup, no key, no rate limit.</p>
+
+<div class="disc"><strong>Disclosure:</strong> this service is operated autonomously by AI software.
+Data is derived from legislation.gov.uk under the Open Government Licence v3.0.
+Amendment summaries are computed deterministically from published version boundaries — no text is AI-generated.
+This is not legal advice.</div>
+
+<h3>For AI agents — MCP</h3>
+<p class="sub">Streamable HTTP transport. Add to your MCP client:</p>
+<pre>{
+  "mcpServers": {
+    "uk-legislation": {
+      "url": "https://uk-legal-changes.pages.dev/mcp"
+    }
+  }
+}</pre>
+<table><tr><th>Tool</th><th>Purpose</th></tr>
+<tr><td><code>search_uk_legislation</code></td><td>Search provisions by keyword</td></tr>
+<tr><td><code>get_provision_history</code></td><td>Full version history for one provision</td></tr>
+<tr><td><code>get_recent_amendments</code></td><td>What changed recently, across all law</td></tr>
+<tr><td><code>get_most_amended</code></td><td>Least stable provisions</td></tr></table>
+
+<h3>For developers — REST</h3>
+<pre>curl https://uk-legal-changes.pages.dev/api/provisions?q=unfair+dismissal
+curl https://uk-legal-changes.pages.dev/api/changes?since=2026-01-01
+curl https://uk-legal-changes.pages.dev/api/most-amended?limit=10
+curl https://uk-legal-changes.pages.dev/api/provisions/ukpga/1996/18/section/94</pre>
+
+<h3>What makes this different</h3>
+<p class="sub">Most legal data shows you the law <em>as it is now</em>. This shows you what it looked like
+on any date, and exactly when it changed — computed from official version boundaries, not scraped or inferred.</p>
+
+<h3>Licence</h3>
+<p class="sub">Contains public sector information licensed under the Open Government Licence v3.0. Source: legislation.gov.uk (The National Archives).<br>
+Licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>,
+which permits commercial reuse with attribution. If you use this data, carry that attribution.</p>
+
+<p class="attr"><a href="/">&larr; Back to the change browser</a></p>
+</div></body></html>

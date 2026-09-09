@@ -1,0 +1,585 @@
+{
+ "records": [
+  {
+   "id": "ukpga/2010/15/section/4",
+   "title": "Equality Act 2010 s.4 \u2014 The protected characteristics",
+   "uri": "https://www.legislation.gov.uk/ukpga/2010/15/section/4/data.xml",
+   "changes": [
+    {
+     "change_date": "2010-10-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2010-10-01.",
+     "chars_added": 1854,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2013-06-25",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 21 characters at the 2013-06-25 boundary (previous boundary 2010-10-01).",
+     "chars_added": 21,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-01-01",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2024-01-01 boundary (previous boundary 2013-06-25).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-15",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-15 boundary (previous boundary 2026-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2010-10-01",
+    "2013-06-25",
+    "2024-01-01",
+    "2026-04-06",
+    "2026-07-15"
+   ]
+  },
+  {
+   "id": "ukpga/2010/15/section/6",
+   "title": "Equality Act 2010 s.6 \u2014 Disability",
+   "uri": "https://www.legislation.gov.uk/ukpga/2010/15/section/6/data.xml",
+   "changes": [
+    {
+     "change_date": "2010-07-06",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2010-07-06.",
+     "chars_added": 3270,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2013-06-25",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 21 characters at the 2013-06-25 boundary (previous boundary 2010-07-06).",
+     "chars_added": 21,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-01-01",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2024-01-01 boundary (previous boundary 2013-06-25).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-15",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-15 boundary (previous boundary 2026-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2010-07-06",
+    "2013-06-25",
+    "2024-01-01",
+    "2026-04-06",
+    "2026-07-15"
+   ]
+  },
+  {
+   "id": "ukpga/2010/15/section/19",
+   "title": "Equality Act 2010 s.19 \u2014 Indirect discrimination",
+   "uri": "https://www.legislation.gov.uk/ukpga/2010/15/section/19/data.xml",
+   "changes": [
+    {
+     "change_date": "2010-10-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2010-10-01.",
+     "chars_added": 2535,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-01-01",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 21 characters at the 2024-01-01 boundary (previous boundary 2010-10-01).",
+     "chars_added": 21,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-15",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-15 boundary (previous boundary 2026-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2010-10-01",
+    "2024-01-01",
+    "2026-04-06",
+    "2026-07-15"
+   ]
+  },
+  {
+   "id": "ukpga/2002/29/section/327",
+   "title": "Proceeds of Crime Act 2002 s.327 \u2014 Concealing etc",
+   "uri": "https://www.legislation.gov.uk/ukpga/2002/29/section/327/data.xml",
+   "changes": [
+    {
+     "change_date": "2024-01-15",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2024-01-15.",
+     "chars_added": 14543,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-02-02",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-02-02 boundary (previous boundary 2024-01-15).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-06-29",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-06-29 boundary (previous boundary 2026-02-02).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-06-30",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-06-30 boundary (previous boundary 2026-06-29).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2024-01-15",
+    "2026-02-02",
+    "2026-06-29",
+    "2026-06-30"
+   ]
+  },
+  {
+   "id": "ukpga/2015/15/section/62",
+   "title": "Consumer Rights Act 2015 s.62 \u2014 Requirement for contract terms and notices to be fair",
+   "uri": "https://www.legislation.gov.uk/ukpga/2015/15/section/62/data.xml",
+   "changes": [
+    {
+     "change_date": "2015-10-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2015-10-01.",
+     "chars_added": 2597,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-01-01",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2024-01-01 boundary (previous boundary 2015-10-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2025-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2025-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2025-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2015-10-01",
+    "2024-01-01",
+    "2025-04-06",
+    "2026-04-06"
+   ]
+  },
+  {
+   "id": "ukpga/2015/15/section/9",
+   "title": "Consumer Rights Act 2015 s.9 \u2014 Goods to be of satisfactory quality",
+   "uri": "https://www.legislation.gov.uk/ukpga/2015/15/section/9/data.xml",
+   "changes": [
+    {
+     "change_date": "2015-10-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2015-10-01.",
+     "chars_added": 3438,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-01-01",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2024-01-01 boundary (previous boundary 2015-10-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2025-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2025-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2025-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2015-10-01",
+    "2024-01-01",
+    "2025-04-06",
+    "2026-04-06"
+   ]
+  },
+  {
+   "id": "ukpga/1996/18/section/1",
+   "title": "Employment Rights Act 1996 s.1 \u2014 Statement of initial employment particulars.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1996/18/section/1/data.xml",
+   "changes": [
+    {
+     "change_date": "2020-04-06",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2020-04-06.",
+     "chars_added": 16351,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2020-12-31",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2020-12-31 boundary (previous boundary 2020-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-29",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-29 boundary (previous boundary 2020-12-31).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2020-04-06",
+    "2020-12-31",
+    "2026-07-29"
+   ]
+  },
+  {
+   "id": "ukpga/1974/37/section/2",
+   "title": "Health and Safety at Work etc. Act 1974 s.2 \u2014 General duties of employers to their employees.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1974/37/section/2/data.xml",
+   "changes": [
+    {
+     "change_date": "2014-10-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2014-10-01.",
+     "chars_added": 9077,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2022-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 267 characters at the 2022-04-06 boundary (previous boundary 2014-10-01).",
+     "chars_added": 267,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-16",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-16 boundary (previous boundary 2022-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2014-10-01",
+    "2022-04-06",
+    "2026-07-16"
+   ]
+  },
+  {
+   "id": "ukpga/2010/15/section/13",
+   "title": "Equality Act 2010 s.13 \u2014 Direct discrimination",
+   "uri": "https://www.legislation.gov.uk/ukpga/2010/15/section/13/data.xml",
+   "changes": [
+    {
+     "change_date": "2024-01-01",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2024-01-01.",
+     "chars_added": 3202,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-01-01).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-15",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-07-15 boundary (previous boundary 2026-04-06).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2024-01-01",
+    "2026-04-06",
+    "2026-07-15"
+   ]
+  },
+  {
+   "id": "ukpga/2018/12/section/3",
+   "title": "Data Protection Act 2018 s.3 \u2014 Terms relating to the processing of personal data",
+   "uri": "https://www.legislation.gov.uk/ukpga/2018/12/section/3/data.xml",
+   "changes": [
+    {
+     "change_date": "2025-08-20",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2025-08-20.",
+     "chars_added": 8879,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2025-11-17",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2025-11-17 boundary (previous boundary 2025-08-20).",
+     "chars_added": 0,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-06-19",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-06-19 boundary (previous boundary 2025-11-17).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2025-08-20",
+    "2025-11-17",
+    "2026-06-19"
+   ]
+  },
+  {
+   "id": "ukpga/1998/42/section/1",
+   "title": "Human Rights Act 1998 s.1 \u2014 The Convention Rights.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1998/42/section/1/data.xml",
+   "changes": [
+    {
+     "change_date": "2004-06-22",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2004-06-22.",
+     "chars_added": 1723,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2024-04-25",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 21 characters at the 2024-04-25 boundary (previous boundary 2004-06-22).",
+     "chars_added": 21,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-04-25).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2004-06-22",
+    "2024-04-25",
+    "2026-04-06"
+   ]
+  },
+  {
+   "id": "ukpga/1996/18/section/94",
+   "title": "Employment Rights Act 1996 s.94 \u2014 The right.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1996/18/section/94/data.xml",
+   "changes": [
+    {
+     "change_date": "1996-08-22",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 1996-08-22.",
+     "chars_added": 11018,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-29",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 1403 characters at the 2026-07-29 boundary (previous boundary 1996-08-22).",
+     "chars_added": 1403,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "1996-08-22",
+    "2026-07-29"
+   ]
+  },
+  {
+   "id": "ukpga/1996/18/section/98",
+   "title": "Employment Rights Act 1996 s.98 \u2014 General.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1996/18/section/98/data.xml",
+   "changes": [
+    {
+     "change_date": "2014-01-31",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2014-01-31.",
+     "chars_added": 15120,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-29",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 1382 characters at the 2026-07-29 boundary (previous boundary 2014-01-31).",
+     "chars_added": 1382,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2014-01-31",
+    "2026-07-29"
+   ]
+  },
+  {
+   "id": "ukpga/2006/46/section/174",
+   "title": "Companies Act 2006 s.174 \u2014 Duty to exercise reasonable care, skill and diligence",
+   "uri": "https://www.legislation.gov.uk/ukpga/2006/46/section/174/data.xml",
+   "changes": [
+    {
+     "change_date": "2017-12-08",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2017-12-08.",
+     "chars_added": 3489,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-07-16",
+     "change_type": "AMENDED",
+     "summary": "Text expanded by 501 characters at the 2026-07-16 boundary (previous boundary 2017-12-08).",
+     "chars_added": 501,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2017-12-08",
+    "2026-07-16"
+   ]
+  },
+  {
+   "id": "ukpga/2018/12/section/1",
+   "title": "Data Protection Act 2018 s.1 \u2014 Overview",
+   "uri": "https://www.legislation.gov.uk/ukpga/2018/12/section/1/data.xml",
+   "changes": [
+    {
+     "change_date": "2025-11-17",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2025-11-17.",
+     "chars_added": 3029,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-06-19",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-06-19 boundary (previous boundary 2025-11-17).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2025-11-17",
+    "2026-06-19"
+   ]
+  },
+  {
+   "id": "ukpga/1998/42/section/2",
+   "title": "Human Rights Act 1998 s.2 \u2014 Interpretation of Convention rights.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1998/42/section/2/data.xml",
+   "changes": [
+    {
+     "change_date": "2024-04-25",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2024-04-25.",
+     "chars_added": 2574,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-04-25).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2024-04-25",
+    "2026-04-06"
+   ]
+  },
+  {
+   "id": "ukpga/1998/42/section/3",
+   "title": "Human Rights Act 1998 s.3 \u2014 Interpretation of legislation.",
+   "uri": "https://www.legislation.gov.uk/ukpga/1998/42/section/3/data.xml",
+   "changes": [
+    {
+     "change_date": "2024-04-25",
+     "change_type": "INITIAL",
+     "summary": "First recorded version, in force from 2024-04-25.",
+     "chars_added": 1524,
+     "chars_removed": 0
+    },
+    {
+     "change_date": "2026-04-06",
+     "change_type": "AMENDED",
+     "summary": "Text revised with no net length change at the 2026-04-06 boundary (previous boundary 2024-04-25).",
+     "chars_added": 0,
+     "chars_removed": 0
+    }
+   ],
+   "versions": [
+    "2024-04-25",
+    "2026-04-06"
+   ]
+  }
+ ],
+ "attribution": {
+  "attribution_text": "Contains public sector information licensed under the Open Government Licence v3.0. Source: legislation.gov.uk (The National Archives).",
+  "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+ }
+}
