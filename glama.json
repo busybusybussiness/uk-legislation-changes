@@ -1,0 +1,7 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["busybusybussiness"],
+  "author": "busybusybussiness",
+  "github": "busybusybussiness/uk-legislation-changes",
+  "license": "OGL-3.0"
+}
