@@ -3,8 +3,13 @@
   "name": "io.github.busybusybussiness/uk-legislation-changes",
   "title": "UK Legislation Changes",
   "description": "Point-in-time amendment history for 506 UK legislation provisions.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://uk-legal-changes.pages.dev",
+  "repository": {
+    "url": "https://github.com/busybusybussiness/uk-legislation-changes",
+    "source": "github",
+    "id": "1363103427"
+  },
   "remotes": [
     {
       "type": "streamable-http",
