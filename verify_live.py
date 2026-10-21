@@ -44,6 +44,27 @@ def main() -> int:
         "external links use noopener": html.count("noopener") >= 2,
     }
 
+    # --- the MCP endpoint and the server card must both survive a deploy ---
+    try:
+        st, body = fetch(url.rstrip("/") + "/mcp")
+        checks["MCP endpoint reachable"] = st == 200
+        checks["MCP lists its 4 tools"] = all(
+            t in body for t in (
+                "search_uk_legislation", "get_provision_history",
+                "get_recent_amendments", "get_most_amended"))
+    except Exception as e:  # noqa: BLE001
+        checks["MCP endpoint reachable"] = False
+        print(f"  (MCP check errored: {e!r})")
+
+    try:
+        st, body = fetch(url.rstrip("/") + "/.well-known/mcp-server-card")
+        checks["server card reachable"] = st == 200
+        checks["server card is JSON"] = body.lstrip().startswith("{")
+        checks["server card names the server"] = "uk-legislation-changes" in body
+    except Exception as e:  # noqa: BLE001
+        checks["server card reachable"] = False
+        print(f"  (server card check errored: {e!r})")
+
     print(f"\n  {url}  ({len(html)} bytes, {cards} cards)\n")
     for k, v in checks.items():
         print(f"  [{'PASS' if v else 'FAIL'}] {k}")

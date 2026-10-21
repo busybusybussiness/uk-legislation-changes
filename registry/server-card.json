@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "io.github.busybusybussiness/uk-legislation-changes",
+  "title": "UK Legislation Changes",
+  "version": "0.1.1",
+  "description": "Point-in-time amendment history for UK legislation. Search provisions, pull any provision's full amendment history, and see what changed most recently. Free, no API key.",
+  "websiteUrl": "https://uk-legal-changes.pages.dev",
+  "repository": {
+    "url": "https://github.com/busybusybussiness/uk-legislation-changes",
+    "source": "github",
+    "id": "1363103427"
+  },
+  "icons": [
+    {
+      "src": "https://uk-legal-changes.pages.dev/logo_400.png",
+      "sizes": "400x400",
+      "mimeType": "image/png"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://uk-legal-changes.pages.dev/mcp",
+      "supportedProtocolVersions": [
+        "2024-11-05"
+      ]
+    }
+  ]
+}

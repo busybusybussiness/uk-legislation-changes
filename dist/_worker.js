@@ -26,6 +26,44 @@ const CORS = {
   "Access-Control-Expose-Headers": "Mcp-Session-Id",
 };
 
+// ------------------------------------------------------- MCP server card
+// SEP-2127 "MCP Server Cards": a static metadata document that lets AI
+// catalogs discover a remote MCP server before connecting. The spec puts it
+// at /.well-known/mcp-server-card (named variant for multi-server hosts),
+// requires Content-Type: application/json and CORS headers.
+// Kept in sync with registry/server.json and the static copy in
+// dist/.well-known/mcp-server-card.
+const SERVER_CARD = {
+  $schema: "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  name: "io.github.busybusybussiness/uk-legislation-changes",
+  title: "UK Legislation Changes",
+  version: "0.1.1",
+  description:
+    "Point-in-time amendment history for UK legislation. Search provisions, " +
+    "pull any provision's full amendment history, and see what changed most " +
+    "recently. Free, no API key.",
+  websiteUrl: "https://uk-legal-changes.pages.dev",
+  repository: {
+    url: "https://github.com/busybusybussiness/uk-legislation-changes",
+    source: "github",
+    id: "1363103427",
+  },
+  icons: [
+    {
+      src: "https://uk-legal-changes.pages.dev/logo_400.png",
+      sizes: "400x400",
+      mimeType: "image/png",
+    },
+  ],
+  remotes: [
+    {
+      type: "streamable-http",
+      url: "https://uk-legal-changes.pages.dev/mcp",
+      supportedProtocolVersions: ["2024-11-05"],
+    },
+  ],
+};
+
 let DATA = null;
 async function load(env) {
   if (DATA) return DATA;
@@ -318,6 +356,11 @@ export default {
           `## Licence\n${data.attribution.attribution_text}\n${data.attribution.license_url}\n`,
         { headers: { "Content-Type": "text/plain; charset=utf-8", ...CORS } }
       );
+    }
+
+    // MCP Server Card (SEP-2127) - discovery endpoint.
+    if (path === "/.well-known/mcp-server-card" || path.startsWith("/.well-known/mcp-server-card/")) {
+      return json(SERVER_CARD, 200, { "Cache-Control": "public, max-age=3600" });
     }
 
     return env.ASSETS.fetch(request);

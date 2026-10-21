@@ -4,3 +4,5 @@ pipeline.db
 *.db-shm
 node_modules/
 .wrangler/
+deploy/
+*.db-wal
