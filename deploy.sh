@@ -111,10 +111,15 @@ cat > "$DIST/_headers" <<'HEADERS'
 HEADERS
 
 echo "==> Deploying to Cloudflare Pages (free tier)"
-npx -y wrangler pages deploy "$DIST" \
+# wrangler is a native Windows program and does NOT understand MSYS paths, so
+# hand it a Windows path. Without this it looks for C:\c\Users\... and fails.
+DIST_NATIVE="$(cygpath -w "$DIST" 2>/dev/null || echo "$DIST")"
+echo "    dist: $DIST_NATIVE"
+npx -y wrangler pages deploy "$DIST_NATIVE" \
     --project-name "$PROJECT" \
     --commit-dirty=true
 
 echo
 echo "==> Deployed. Verifying on the live URL..."
-python "$HERE/verify_live.py" "https://${PROJECT}.pages.dev" || true
+# python is a native Windows program too - give it a Windows path.
+python "$(cygpath -w "$HERE/verify_live.py")" "https://${PROJECT}.pages.dev" || true
