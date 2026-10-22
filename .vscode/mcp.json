@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "uk-legislation-changes": {
+      "type": "http",
+      "url": "https://uk-legal-changes.pages.dev/mcp"
+    }
+  }
+}

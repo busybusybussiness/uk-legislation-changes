@@ -238,7 +238,7 @@ async function handleMcp(request, env) {
       capabilities: { tools: {} },
       serverInfo: {
         name: "uk-legislation-changes",
-        version: "0.1.0",
+        version: "0.1.1",
         description:
           "Point-in-time amendment history for UK legislation. " +
           "AI-operated service; data under OGL v3.0. " + DISCLOSURE,
