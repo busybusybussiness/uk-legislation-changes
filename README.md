@@ -2,7 +2,11 @@
 
 **Point-in-time amendment history for UK law — a free API and an MCP server. No API key, no signup, no cost.**
 
-**Live:** https://uk-legal-changes.pages.dev · **Docs:** `/docs` · **MCP:** `/mcp` · **Server card:** `/.well-known/mcp-server-card`
+[![Glama](https://glama.ai/mcp/servers/busybusybussiness/uk-legislation-changes/badge)](https://glama.ai/mcp/servers/busybusybussiness/uk-legislation-changes)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-published-2ea44f)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.busybusybussiness/uk-legislation-changes)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**Live:** https://uk-legal-changes.pages.dev · **Docs:** `/docs` · **MCP:** `/mcp` · **Server card:** `/.well-known/mcp-server-card` · **`/llms.txt`**
 
 528 provisions across employment, equality, consumer, data protection, company, health & safety and
 financial-crime law. **1,598 tracked versions, 1,070 amendments**, coverage 1992–2026.
@@ -55,6 +59,22 @@ This server publishes a spec-compliant server card, so registries can discover i
 ```
 https://uk-legal-changes.pages.dev/.well-known/mcp-server-card
 ```
+
+It is published to the **official MCP Registry** as
+`io.github.busybusybussiness/uk-legislation-changes` (manifest in
+[`server.json`](server.json)), and is listed on
+[Glama](https://glama.ai/mcp/servers/busybusybussiness/uk-legislation-changes).
+
+### Plain REST (no client needed)
+
+```bash
+curl "https://uk-legal-changes.pages.dev/api/provisions?q=unfair+dismissal"
+```
+
+### For AI agents
+
+`/llms.txt` and `/llms-full.txt` describe the endpoints, the MCP tools and the licence
+in a form agents can read directly. `/sitemap.xml` lists every provision.
 
 ---
 

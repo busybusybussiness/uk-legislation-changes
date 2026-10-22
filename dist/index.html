@@ -24,6 +24,19 @@ h3{margin:0 0 9px;font-size:14px;font-weight:600;line-height:1.35}
 .attr{margin-top:14px;padding-top:11px;border-top:1px solid var(--border);font-size:10.5px;color:var(--muted-foreground);line-height:1.6}
 .attr a{color:inherit}
 .showing{font-size:11px;color:var(--muted-foreground);margin:0 0 10px}
+
+.connect{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:14px 16px;margin:22px 0 12px}
+.connect h3{margin:0 0 8px;font-size:15px;font-weight:650;letter-spacing:-.01em}
+.connect p{margin:0 0 8px;font-size:13px;line-height:1.55;color:var(--foreground)}
+.connect code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--background);border:1px solid var(--border);border-radius:5px;padding:1px 5px}
+.connect ul{margin:0 0 8px;padding-left:18px;font-size:13px;line-height:1.6}
+.connect a{color:var(--foreground)}
+.connect .sep{height:1px;background:var(--border);margin:12px 0}
+.promo{border:1px solid var(--border);border-radius:9px;padding:12px 14px;margin:12px 0 4px;background:var(--card)}
+.promo b{font-size:13.5px}
+.promo span{font-size:12.5px;color:var(--muted-foreground);display:block;margin-top:3px}
+.promo a{color:var(--foreground);font-weight:600}
+
 </style></head><body><div class="wrap">
 <h2>UK legislation — what changed, and when</h2>
 <p class="sub">Point-in-time amendment history, computed from the official record.</p>
@@ -38,4 +51,28 @@ h3{margin:0 0 9px;font-size:14px;font-weight:600;line-height:1.35}
 <p class="attr">Contains public sector information licensed under the Open Government Licence v3.0. Source: legislation.gov.uk (The National Archives).<br>
 Licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>.
 Amendment summaries are computed deterministically from published version boundaries; no generated prose.</p>
+<div class="connect">
+<h3>Use this from an agent</h3>
+<p>Point any MCP client at <code>https://uk-legal-changes.pages.dev/mcp</code> &mdash; keyless, no signup:</p>
+<ul>
+<li><b>Claude Code / any MCP client</b>: <code>npx -y mcp-remote@0.15.2 https://uk-legal-changes.pages.dev/mcp</code></li>
+<li><b>Cursor</b>: add <code>{"mcpServers":{"uk-legislation-changes":{"url":"https://uk-legal-changes.pages.dev/mcp"}}}</code> to <code>.cursor/mcp.json</code></li>
+<li><b>VS Code</b>: add <code>{"servers":{"uk-legislation-changes":{"type":"http","url":"https://uk-legal-changes.pages.dev/mcp"}}}</code> to <code>.vscode/mcp.json</code></li>
+</ul>
+<p>Four tools: <code>search_uk_legislation</code>, <code>get_provision_history</code>, <code>get_recent_amendments</code>, <code>get_most_amended</code>.</p>
+<div class="sep"></div>
+<p><b>Where this is listed</b> &mdash;
+<a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.busybusybussiness/uk-legislation-changes" target="_blank" rel="noopener">Official MCP Registry</a> &middot;
+<a href="https://glama.ai/mcp/servers/busybusybussiness/uk-legislation-changes" target="_blank" rel="noopener">Glama</a> &middot;
+<a href="https://github.com/busybusybussiness/uk-legislation-changes" target="_blank" rel="noopener">GitHub source</a> &middot;
+<a href="https://uk-legal-changes.pages.dev/.well-known/mcp-server-card" target="_blank" rel="noopener">server card</a> &middot;
+<a href="https://uk-legal-changes.pages.dev/llms.txt" target="_blank" rel="noopener">llms.txt</a></p>
+<div class="promo">
+<b>Building a paid API or scraper?</b>
+<span>The same operator ships an Apify pay-per-event starter kit &mdash; a working actor template with
+<code>Actor.charge()</code> wired correctly, plus the pricing calculator that survives the 20% commission.
+Those are the wiring mistakes that make a paid actor quietly earn $0.
+<a href="https://busybusiness.gumroad.com/l/lnvqhh" target="_blank" rel="noopener">Get the kit &mdash; $19</a>.</span>
+</div>
+</div>
 </div></body></html>

@@ -11,6 +11,7 @@ DIST = HERE / "dist"
 MAX_CARDS = 120
 
 
+
 def main() -> int:
     conn = sqlite3.connect(f"file:{DB.as_posix()}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
@@ -62,7 +63,8 @@ def main() -> int:
             f'<a class="src" href="{r["uri"].replace("/data.xml", "")}" target="_blank" '
             'rel="noopener">View on legislation.gov.uk &rarr;</a></article>')
 
-    style = (HERE / "style.css").read_text(encoding="utf-8")
+    footer = (HERE / "site_footer.html").read_text(encoding="utf-8")
+    style = (HERE / "style.css").read_text(encoding="utf-8") + (HERE / "site_footer.css").read_text(encoding="utf-8")
     page = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UK legislation — what changed, and when</title>
@@ -81,11 +83,14 @@ def main() -> int:
 <p class="attr">{html.escape(src['attribution_text'])}<br>
 Licensed under the <a href="{src['license_url']}" target="_blank" rel="noopener">Open Government Licence v3.0</a>.
 Amendment summaries are computed deterministically from published version boundaries; no generated prose.</p>
+{footer}
 </div></body></html>"""
 
     DIST.mkdir(exist_ok=True)
     (DIST / "index.html").write_text(page, encoding="utf-8")
-    json.dump({"records": recs, "attribution": src},
+    json.dump({"records": recs, "attribution": src,
+               "stats": {"provisions": tot_r, "versions": tot_v,
+                         "amendments": tot_a, "coverage": f"{rng['a'][:4]}-{rng['b'][:4]}"}},
               open(DIST / "data.json", "w", encoding="utf-8"), indent=1)
     print(f"  built dist/index.html — {len(page):,} bytes, {len(show)} cards")
     print(f"  {tot_r} provisions | {tot_v:,} versions | {tot_a:,} amendments")

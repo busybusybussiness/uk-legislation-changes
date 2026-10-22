@@ -3,7 +3,7 @@
   "name": "io.github.busybusybussiness/uk-legislation-changes",
   "title": "UK Legislation Changes",
   "description": "Point-in-time amendment history for UK legislation provisions. Search provisions, pull full amendment history, and see what changed most recently. Free, no API key.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://uk-legal-changes.pages.dev",
   "repository": {
     "url": "https://github.com/busybusybussiness/uk-legislation-changes",

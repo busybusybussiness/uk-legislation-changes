@@ -66,13 +66,16 @@ echo "==> Assembling the deploy directory"
 mkdir -p "$DIST"
 
 # The site is rebuilt from the database only when that database is present.
-# pipeline.db is git-ignored; when it is missing the committed dist/ is used
-# and MUST NOT be silently replaced with an older build.
+# pipeline.db is git-ignored and is the source of truth for a full rebuild.
+# When it is absent (CI, another machine) patch the committed dist/index.html
+# instead of regenerating it, so we never publish a site without the worker
+# and never publish an older build.
 if [ -f "$HERE/pipeline.db" ]; then
   echo "    pipeline.db found - rebuilding the site from source"
   python "$HERE/build_site.py"
 else
-  echo "    pipeline.db NOT found - deploying the existing dist/ as-is"
+  echo "    no pipeline.db - patching the committed dist/index.html instead"
+  python "$(cygpath -w "$HERE/patch_index_footer.py")"
 fi
 
 # The worker is what serves /mcp. If it is missing the site still deploys but

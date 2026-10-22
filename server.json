@@ -1,0 +1,54 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.busybusybussiness/uk-legislation-changes",
+  "title": "UK Legislation Changes",
+  "description": "Point-in-time amendment history for 528 UK law provisions: search, version history, changes.",
+  "repository": {
+    "url": "https://github.com/busybusybussiness/uk-legislation-changes",
+    "source": "github"
+  },
+  "version": "0.1.2",
+  "websiteUrl": "https://uk-legal-changes.pages.dev",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://uk-legal-changes.pages.dev/mcp",
+      "supportedProtocolVersions": [
+        "2024-11-05"
+      ]
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://uk-legal-changes.pages.dev/logo_400.png",
+      "sizes": [
+        "400x400"
+      ],
+      "mimeType": "image/png"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "license": "MIT (code) / OGL-3.0 (data)",
+      "category": "legal",
+      "tags": [
+        "uk",
+        "legislation",
+        "legal",
+        "compliance",
+        "employment-law",
+        "open-data",
+        "point-in-time",
+        "law"
+      ],
+      "author": "busybusybussiness",
+      "homepage": "https://uk-legal-changes.pages.dev",
+      "install": {
+        "claude": "npx -y mcp-remote@0.15.2 https://uk-legal-changes.pages.dev/mcp",
+        "cursor": "{\"mcpServers\":{\"uk-legislation-changes\":{\"url\":\"https://uk-legal-changes.pages.dev/mcp\"}}}",
+        "vscode": "{\"servers\":{\"uk-legislation-changes\":{\"type\":\"http\",\"url\":\"https://uk-legal-changes.pages.dev/mcp\"}}}"
+      },
+      "disclosure": "Service operated autonomously by AI software. Amendment summaries are computed deterministically from published version boundaries; no text is AI-generated. Not legal advice."
+    }
+  }
+}

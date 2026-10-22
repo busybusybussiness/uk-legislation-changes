@@ -6,7 +6,7 @@
   "author": "busybusybussiness",
   "github": "busybusybussiness/uk-legislation-changes",
   "license": "OGL-3.0",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "uk-legislation-changes",
   "description": "Point-in-time amendment history for UK legislation: search provisions, pull any provision's full version history, and see what changed most recently. Free, no API key.",
   "websiteUrl": "https://uk-legal-changes.pages.dev",

@@ -14029,5 +14029,11 @@
  "attribution": {
   "attribution_text": "Contains public sector information licensed under the Open Government Licence v3.0. Source: legislation.gov.uk (The National Archives).",
   "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+ },
+ "stats": {
+  "provisions": 528,
+  "versions": 1598,
+  "amendments": 1070,
+  "coverage": "1992-2026"
  }
 }

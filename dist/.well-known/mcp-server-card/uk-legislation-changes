@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
   "name": "io.github.busybusybussiness/uk-legislation-changes",
   "title": "UK Legislation Changes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Point-in-time amendment history for UK legislation. Search provisions, pull any provision's full amendment history, and see what changed most recently. Free, no API key.",
   "websiteUrl": "https://uk-legal-changes.pages.dev",
   "repository": {

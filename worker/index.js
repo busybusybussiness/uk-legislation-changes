@@ -37,7 +37,7 @@ const SERVER_CARD = {
   $schema: "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
   name: "io.github.busybusybussiness/uk-legislation-changes",
   title: "UK Legislation Changes",
-  version: "0.1.1",
+  version: "0.1.2",
   description:
     "Point-in-time amendment history for UK legislation. Search provisions, " +
     "pull any provision's full amendment history, and see what changed most " +
@@ -238,7 +238,7 @@ async function handleMcp(request, env) {
       capabilities: { tools: {} },
       serverInfo: {
         name: "uk-legislation-changes",
-        version: "0.1.1",
+        version: "0.1.2",
         description:
           "Point-in-time amendment history for UK legislation. " +
           "AI-operated service; data under OGL v3.0. " + DISCLOSURE,
@@ -347,15 +347,97 @@ export default {
 
     if (path === "/llms.txt") {
       const data = await load(env);
+      const st = data.stats || {};
+      const provisions = st.provisions || data.records.length;
+      const versions = st.versions || 0;
+      const amendments = st.amendments || 0;
+      const coverage = st.coverage || "1992-2026";
       return new Response(
         `# UK Legislation Change API\n\n` +
-          `> Point-in-time amendment history for ${data.records.length} provisions of UK law.\n\n` +
+          `> Point-in-time amendment history for ${provisions} provisions of UK law ` +
+          `(${versions.toLocaleString("en-GB")} tracked versions, ${amendments.toLocaleString("en-GB")} amendments, ` +
+          `coverage ${coverage}).\n\n` +
           `${DISCLOSURE}\n\n` +
-          `## API\n- GET /api — service description\n- GET /api/provisions?q= — search\n` +
-          `- GET /api/changes?since= — recent amendments\n- POST /mcp — MCP endpoint for agents\n\n` +
-          `## Licence\n${data.attribution.attribution_text}\n${data.attribution.license_url}\n`,
+          `## What this gives you\n` +
+          `Not a keyword search over legislation text. For a provision you get the ordered list of\n` +
+          `version boundaries with what changed at each one, computed deterministically from the\n` +
+          `published record. That is what makes "what did this say in March 2019" answerable.\n\n` +
+          `## REST API (keyless, no signup)\n` +
+          `- GET /api — service description\n` +
+          `- GET /api/provisions?q= — search provisions\n` +
+          `- GET /api/provisions/{id} — one provision, full point-in-time history\n` +
+          `- GET /api/changes?since= — recent amendments across all provisions\n` +
+          `- GET /api/most-amended — the least stable areas of UK law\n\n` +
+          `## MCP (streamable HTTP, protocol 2024-11-05)\n` +
+          `- POST https://uk-legal-changes.pages.dev/mcp\n` +
+          `- tools: search_uk_legislation(query, limit), get_provision_history(id),\n` +
+          `  get_recent_amendments(since, limit), get_most_amended(limit)\n` +
+          `- connect: npx -y mcp-remote@0.15.2 https://uk-legal-changes.pages.dev/mcp\n` +
+          `- server card: https://uk-legal-changes.pages.dev/.well-known/mcp-server-card\n` +
+          `- listed in the official registry as io.github.busybusybussiness/uk-legislation-changes\n\n` +
+          `## Other files\n` +
+          `- /llms-full.txt — the same reference in longer form\n` +
+          `- /sitemap.xml — provision index for crawlers\n\n` +
+          `## Licence\n${data.attribution.attribution_text}\n${data.attribution.license_url}\n` +
+          `Source: legislation.gov.uk (The National Archives). Not legal advice.\n`,
         { headers: { "Content-Type": "text/plain; charset=utf-8", ...CORS } }
       );
+    }
+
+    // llms-full.txt - the long form of the same reference, for agents that
+    // want the endpoint and tool details in one paste.
+    if (path === "/llms-full.txt") {
+      const data = await load(env);
+      const st = data.stats || {};
+      const body = [
+        "# UK Legislation Change API - full reference",
+        "",
+        `> ${st.provisions || data.records.length} provisions, ${st.versions || 0} tracked versions, ` +
+        `${st.amendments || 0} amendments, coverage ${st.coverage || "1992-2026"}.`,
+        "",
+        DISCLOSURE,
+        "",
+        "## Endpoints",
+        "GET /api",
+        "GET /api/provisions?q=<query>&limit=<n>",
+        "GET /api/provisions/{id}",
+        "GET /api/changes?since=<YYYY-MM-DD>&limit=<n>",
+        "GET /api/most-amended?limit=<n>",
+        "",
+        "## MCP",
+        "POST https://uk-legal-changes.pages.dev/mcp",
+        "protocolVersion 2024-11-05, transport streamable-http, auth: none",
+        "tools: search_uk_legislation, get_provision_history, get_recent_amendments, get_most_amended",
+        "",
+        "## Provenance",
+        data.attribution.attribution_text,
+        data.attribution.license_url,
+        "Source: legislation.gov.uk (The National Archives). Not legal advice.",
+      ].join("\n");
+      return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8", ...CORS } });
+    }
+
+    // robots.txt - allow everything; the data is public and OGL-licensed.
+    if (path === "/robots.txt") {
+      return new Response(
+        `User-agent: *\nAllow: /\n\nSitemap: https://uk-legal-changes.pages.dev/sitemap.xml\n`,
+        { headers: { "Content-Type": "text/plain; charset=utf-8", ...CORS } }
+      );
+    }
+
+    // sitemap.xml - the provision index, so crawlers can reach each provision.
+    if (path === "/sitemap.xml") {
+      const data = await load(env);
+      const urls = data.records
+        .map((r) => `  <url><loc>https://uk-legal-changes.pages.dev/#${r.id}</loc></url>`)
+        .join("\n");
+      const xml =
+        `<?xml version="1.0" encoding="UTF-8"?>\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `  <url><loc>https://uk-legal-changes.pages.dev/</loc><changefreq>weekly</changefreq></url>\n` +
+        `  <url><loc>https://uk-legal-changes.pages.dev/docs</loc></url>\n` +
+        urls + "\n</urlset>\n";
+      return new Response(xml, { headers: { "Content-Type": "application/xml; charset=utf-8", ...CORS } });
     }
 
     // MCP Server Card (SEP-2127) - discovery endpoint.
