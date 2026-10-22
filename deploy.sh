@@ -111,12 +111,17 @@ cat > "$DIST/_headers" <<'HEADERS'
 HEADERS
 
 echo "==> Deploying to Cloudflare Pages (free tier)"
+# The apex domain (uk-legal-changes.pages.dev) serves the PRODUCTION branch of this
+# Pages project, which is "main". Our git working branch is "master", and a deploy
+# without --branch lands on master => Preview only => the live site does not change.
+# Always pass --branch main (or set DEPLOY_BRANCH) so the live site actually updates.
 # wrangler is a native Windows program and does NOT understand MSYS paths, so
 # hand it a Windows path. Without this it looks for C:\c\Users\... and fails.
 DIST_NATIVE="$(cygpath -w "$DIST" 2>/dev/null || echo "$DIST")"
 echo "    dist: $DIST_NATIVE"
 npx -y wrangler pages deploy "$DIST_NATIVE" \
     --project-name "$PROJECT" \
+    --branch "${DEPLOY_BRANCH:-main}" \
     --commit-dirty=true
 
 echo
